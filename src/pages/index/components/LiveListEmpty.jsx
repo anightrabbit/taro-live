@@ -6,7 +6,9 @@ import '../index.scss';
 const LiveListEmpty = ({ text, icon }) => {
   return (
     <View className='live-list-empty'>
-      <Image src={icon} />
+      {
+        icon && <Image src={icon} />
+      }
       <Text>{text}</Text>
     </View>
   );

@@ -1,6 +1,8 @@
 import Taro from '@tarojs/taro';
 import PropTypes from 'prop-types';
 import { View, Image } from '@tarojs/components';
+import LiveStatus from './LiveStatus';
+import LivePushers from './LivePushers';
 import '../index.scss';
 
 const LiveItem = ({ data }) => {
@@ -8,8 +10,9 @@ const LiveItem = ({ data }) => {
 		backgroundImage:`url(${data.backgroundPicUri})`,
 	};
   return (
-    <View className='live-item' style={bgImg}>
-      
+    <View className='live-item' style={data.backgroundPicUri && bgImg}>
+      <LiveStatus status={data.status} />
+      <LivePushers pushers={data.pushers} title={data.title} poiName={data.poiName} liveData={data.liveData} />      	
     </View>
   );
 };

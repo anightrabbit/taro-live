@@ -6,14 +6,108 @@
 .live-list {
   padding: 20px;
 }
+.live-list-empty {
+	width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:28px;
+  line-height:200px;
+  color:#39bee9;
+}
 // LiveItem components
 .live-item {
   position: relative;
   height: 500px;
+  padding: 20px;
+  box-sizing:border-box;
   border-radius: 5px;
   margin-bottom: 20px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-image: linear-gradient(rgba(211,211,211,.2),rgba(255,255,255,.8));
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.live-status {
+  display: inline-flex;
+  height: 50px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 0 20px 0 0;
+  font-size: 24px;
+  color: #FFF;
+  .icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+}
+.live-pushers {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #333;
+  display: flex;
+  .live-pusher-avatar {
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing:border-box;
+    margin-top: -50px;
+    border-radius: 50%;
+    border:6px solid #FFF;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+  }
+  .live-pusher-infor {
+    line-height: 1;
+    flex:1;
+    .live-pusher-name {
+      display: block;
+      font-size: 28px;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+    .live-pusher-title {
+      display: block;
+      font-size: 32px;
+      font-weight: 500;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+    .live-pusher-index {
+      height: 24px;
+      display: flex;
+      align-items: center;
+      color: #666;
+      font-size: 24px;
+      .live-pusher-poi {
+        max-width: 300px;
+        margin-right: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+      }
+      .icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
