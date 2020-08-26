@@ -9,7 +9,6 @@ const postLiveList = params => (
     return res.data.list;
   })
   .catch(() => {
-  	debugger;
     throw new Error('获取直播大厅列表失败');
   })
 );

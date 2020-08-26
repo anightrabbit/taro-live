@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { View } from '@tarojs/components';
 import LiveListEmpty from './LiveListEmpty';
 import LiveItem  from './LiveItem';
+import ListBottom  from '../../../components/ListBottom';
 import '../index.scss';
 
 const LiveList = ({ data }) => {
@@ -12,6 +13,7 @@ const LiveList = ({ data }) => {
       {
         data.map(item => <LiveItem key={item.liveRoomId} data={item} />)
       }
+      <ListBottom />
     </View>
   );
 };

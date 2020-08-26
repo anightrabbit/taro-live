@@ -10,7 +10,7 @@ const LiveItem = ({ data }) => {
 		backgroundImage:`url(${data.backgroundPicUri})`,
 	};
   return (
-    <View className='live-item' style={data.backgroundPicUri && bgImg}>
+    <View onClick={()=> Taro.navigateTo({url:`/pages/room/index?roomId=${data.liveRoomId}`})} className='live-item' style={data.backgroundPicUri && bgImg}>
       <LiveStatus status={data.status} />
       <LivePushers pushers={data.pushers} title={data.title} poiName={data.poiName} liveData={data.liveData} />      	
     </View>
